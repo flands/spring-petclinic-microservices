@@ -16,4 +16,10 @@ EXPOSE ${EXPOSED_PORT}
 
 ENV SPRING_PROFILES_ACTIVE docker
 
-ENTRYPOINT ["java", "-XX:+UnlockExperimentalVMOptions", "-XX:+UseCGroupMemoryLimitForHeap", "-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
+ENTRYPOINT ["java", \
+            "-XX:+UnlockExperimentalVMOptions", \
+            "-XX:+UseCGroupMemoryLimitForHeap", \
+            "-Djava.security.egd=file:/dev/./urandom", \
+            "-jar", \
+            "/app.jar" \
+]
